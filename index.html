@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CodeFinder3</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+        background-image: url('back.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-size: 100% 100%;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 0 0 60px #ff00c3;
+      font-size: 60px;
+    }
+
+    form {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #f1f1f1;
+      text-shadow: 0 0 10px #8e44ad;
+      font-size: 30px;
+    }
+
+    input[type="text"] {
+      width: 500px;
+      padding: 15px;
+      font-size: 28px;
+      background-color: #ff00ee;
+      color: #fff;
+      border: none;
+      outline: none;
+      box-shadow: 0 0 20px #8e44ad;
+      border: 2px solid #fff;
+    }
+
+    button[type="submit"] {
+      padding: 15px 40px;
+      font-size: 28px;
+      background-color: #ff00d4;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      box-shadow: 0 0 20px #8e44ad;
+      border: 2px solid #fff;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <form id="searchForm" onsubmit="performSearch(event)">
+      <h1>CodeFinder3</h1>
+      <label for="codeInput"><strong>[3hentai.net] </strong> Code:</label>
+      <input type="text" id="codeInput" required>
+      <br>
+      <button type="submit"><strong>Search</strong></button>
+    </form>
+  </div>
+
+  <script>
+    function performSearch(event) {
+      event.preventDefault();
+
+      var code = document.getElementById("codeInput").value;
+      var url = "https://3hentai.net/d/" + encodeURIComponent(code);
+
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
